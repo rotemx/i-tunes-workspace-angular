@@ -1,0 +1,45 @@
+body{
+	background-color: white;
+	margin: 0;
+}
+
+
+body,html {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.app-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+ita-layout {
+    flex: 1;
+    display: flex;
+}
+
+header {
+    height: 80px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 80px;
+    background: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}

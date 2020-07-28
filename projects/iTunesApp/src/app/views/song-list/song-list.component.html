@@ -1,0 +1,8 @@
+<p>song-list works!</p>
+
+
+<ul>
+	<li *ngFor="let song of iTunesService.songs">
+		{{song.artist}} - {{song.trackName}}
+	</li>
+</ul>
