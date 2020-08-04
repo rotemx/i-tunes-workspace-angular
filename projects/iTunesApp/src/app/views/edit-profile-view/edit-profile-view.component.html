@@ -1,0 +1,65 @@
+pristine? {{formGroup.pristine}} <br>
+
+valid: {{formGroup.valid | json}} <br>
+
+errors ? {{formGroup.errors |  json }} <br>
+
+
+<form class="form-wrap" [formGroup]="formGroup">
+	<div class="labels-cols">
+		<div class="label"> Name:</div>
+		<div class="label"> Age:</div>
+	</div>
+	<div class="inputs-cols">
+		<div class="input-col">
+			<input type="text" formControlName="name">
+			<div class="form-error-div"
+			     *ngIf="formGroup.controls['name'].errors"
+			>
+				<span
+						*ngIf="formGroup.controls['name'].errors.minlength"
+				>
+					Input should be {{ formGroup.controls['name'].errors.minlength.requiredLength}} character longs, but it is only
+					{{  formGroup.controls['name'].errors.minlength.actualLength}}
+				</span>
+				<span
+						*ngIf="!formGroup.controls['name'].pristine && formGroup.controls['name'].errors.required"
+				>
+					Name is required!
+				</span>
+				
+			</div>
+		</div>
+		<div class="input-col">
+			<input type="number" formControlName="age">
+			<div class="form-error-div"
+			     *ngIf="formGroup.controls['age'].errors"
+			>
+				<span
+						*ngIf="formGroup.controls['age'].errors.min"
+				>
+					Age should be minimum {{ formGroup.controls['age'].errors.min.min}}, but it is
+					{{  formGroup.controls['age'].errors.min.actual}}
+				</span>
+			
+				<span
+						*ngIf="formGroup.controls['age'].errors.max"
+				>
+					Age should be maximum {{ formGroup.controls['age'].errors.max.max}}, but it is
+					{{  formGroup.controls['age'].errors.max.actual}}
+				</span>
+			
+			</div>
+		
+		</div>
+	</div>
+	<button
+			type="submit"
+			[disabled]="formGroup.pristine || !formGroup.valid"
+			(click)="onSave()"
+	>
+		Save
+	</button>
+</form>
+
+

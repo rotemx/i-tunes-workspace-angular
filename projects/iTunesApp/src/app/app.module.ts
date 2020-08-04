@@ -1,22 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule}      from '@angular/core';
 
-import { AppRoutingModule }  from './app-routing.module';
-import { LayoutComponent }   from './views/layout/layout.component';
-import { SongListComponent } from './views/song-list/song-list.component';
-import {HttpClientModule}    from '@angular/common/http';
+import {AppRoutingModule}                 from './app-routing.module';
+import {LayoutComponent}                  from './views/layout/layout.component';
+import {SongListComponent}                from './views/song-list/song-list.component';
+import {HttpClientModule}                 from '@angular/common/http';
+import {EditProfileViewComponent}         from './views/edit-profile-view/edit-profile-view.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    LayoutComponent,
-    SongListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [HttpClientModule],
-  bootstrap: [LayoutComponent]
+    declarations: [
+        LayoutComponent,
+        SongListComponent,
+        EditProfileViewComponent
+    ],
+    imports     : [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
+    providers   : [HttpClientModule],
+    bootstrap   : [LayoutComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
