@@ -23,7 +23,7 @@ ita-layout {
 
 header {
     height: 80px;
-    background: gray;
+    background: #b0ccff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,10 +36,60 @@ footer {
     align-items: center;
     display: flex;
     color: white;
+    flex-direction: column;
 }
 
 .content {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+
+ita-edit-profile-view {
+    /* border: 1px solid; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: end;
+    align-items: center;
+}
+
+.form-wrap {
+    flex: 1;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-evenly;
+    padding: 30px;
+    margin: 30px;
+    border: .5px dashed #d9d8d8;
+    border-radius: 10px;
+    background: #f4f4f4;
+    /* flex-direction: column; */
+}
+
+.label, .input-col {
+    padding: 10px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #c1c1c1;
+    background: #d8d8d8;
+    /* color: white; */
+    border-radius: 5px;
+}
+
+.form-error-div {
+    color: red;
+    font-weight: 100;
+}
+
+input.ng-invalid:not(.ng-pristine) {
+    border: 1px solid red;
+}
+
+button:focus, input:focus {
+    outline: 1px solid blue;
 }
