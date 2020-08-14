@@ -5,13 +5,24 @@ valid: {{formGroup.valid | json}} <br>
 errors ? {{formGroup.errors |  json }} <br>
 
 
+<h2>
+	enter decimal number:
+	<input [(ngModel)]="num"  placeholder="Enter decimal">
+	<br>
+	{{num | binary }}
+</h2>
+
+
+
 <form class="form-wrap" [formGroup]="formGroup">
+	
 	<div class="labels-cols">
 		<div class="label"> Name:</div>
 		<div class="label"> Age:</div>
 	</div>
 	<div class="inputs-cols">
 		<div class="input-col">
+			(has to include "boris")
 			<input type="text" formControlName="name">
 			<div class="form-error-div"
 			     *ngIf="formGroup.controls['name'].errors"
@@ -27,7 +38,12 @@ errors ? {{formGroup.errors |  json }} <br>
 				>
 					Name is required!
 				</span>
-				
+				<span
+						*ngIf="!formGroup.controls['name'].pristine && formGroup.controls['name'].errors.noWords"
+				>
+					{{formGroup.controls['name'].errors.noWords}}
+				</span>
+			
 			</div>
 		</div>
 		<div class="input-col">
@@ -41,7 +57,7 @@ errors ? {{formGroup.errors |  json }} <br>
 					Age should be minimum {{ formGroup.controls['age'].errors.min.min}}, but it is
 					{{  formGroup.controls['age'].errors.min.actual}}
 				</span>
-			
+				
 				<span
 						*ngIf="formGroup.controls['age'].errors.max"
 				>
@@ -51,6 +67,15 @@ errors ? {{formGroup.errors |  json }} <br>
 			
 			</div>
 		
+		</div>
+		<div class="input-col">
+			Address:
+			<form formGroupName="address">
+				street:
+				<input formControlName="street" placeholder="street">
+				city:
+				<input formControlName="city" placeholder="city">
+			</form>
 		</div>
 	</div>
 	<button

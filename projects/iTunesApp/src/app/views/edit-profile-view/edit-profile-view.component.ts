@@ -1,5 +1,6 @@
 import {Component, OnInit}                  from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {WordsValidator}                     from '../../utils/validators/words-validator';
 
 @Component({
     selector   : 'ita-edit-profile-view',
@@ -8,9 +9,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class EditProfileViewComponent implements OnInit {
     
+    num:string
+    
     formGroup = new FormGroup({
-        name: new FormControl('', [Validators.required, Validators.minLength(6)]),
+        name: new FormControl('', [WordsValidator('boris', 1)]),
         age : new FormControl(undefined, [Validators.min(18), Validators.max(65)]),
+        address: new FormGroup({
+            street:new FormControl('', [Validators.minLength(2)]),
+            city:new FormControl('', [Validators.required, Validators.minLength(2)]),
+        })
     });
     
     

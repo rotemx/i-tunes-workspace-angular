@@ -7,12 +7,16 @@ import {SongListComponent}                from './views/song-list/song-list.comp
 import {HttpClientModule}                 from '@angular/common/http';
 import {EditProfileViewComponent}         from './views/edit-profile-view/edit-profile-view.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BinaryPipe } from './pipes/binary-pipe.pipe';
+import { TheMarkerDirective } from './directives/the-marker.directive';
 
 @NgModule({
     declarations: [
         LayoutComponent,
         SongListComponent,
-        EditProfileViewComponent
+        EditProfileViewComponent,
+        BinaryPipe,
+        TheMarkerDirective
     ],
     imports     : [
         BrowserModule,
