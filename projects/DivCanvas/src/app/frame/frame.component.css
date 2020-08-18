@@ -1,0 +1,5 @@
+.frame{
+	border:3px dashed red;
+	min-width: 100px;
+	min-height: 100px;
+}

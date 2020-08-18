@@ -5,11 +5,13 @@ import { AppRoutingModule }   from './app-routing.module';
 import { AppComponent }       from './app.component';
 import { DashboardComponent }             from './dashboard/dashboard.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FrameComponent } from './frame/frame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    FrameComponent
   ],
   imports: [
     BrowserModule,

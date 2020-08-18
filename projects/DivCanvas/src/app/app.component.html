@@ -1,4 +1,16 @@
-<div class="wrap">
+app frame:
+<button (click)="showWithButton=!showWithButton"> toggle</button>
+<app-frame
+		[showTextWithButton]="showWithButton"
+>
+	<h2 class="just-text">This is the transcluded content </h2>
+	<h2 class="text-with-button">This is the transcluded content with a button
+		<button>I am a button</button>
+	</h2>
+</app-frame>
+
+
+<div class="wrap" *ngIf="false">
 	<button (click)="onAddDiv()"> Add+</button>
 	<div class="toolbox-set" *ngFor="let div of divs"
 	     [ngStyle]="{

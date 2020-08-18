@@ -19,6 +19,7 @@ export interface Div {
 })
 export class AppComponent {
     
+    showWithButton= false;
     
     divs: Div[] = [];
     

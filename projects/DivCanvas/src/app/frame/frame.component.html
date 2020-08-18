@@ -1,0 +1,13 @@
+<div class="frame">
+	<ng-container *ngIf="!showTextWithButton">
+		text:
+		<ng-content select=".just-text"></ng-content>
+	</ng-container>
+	
+	
+	<ng-container *ngIf="showTextWithButton">
+		text with button:
+		<ng-content select=".text-with-button"></ng-content>
+	</ng-container>
+
+</div>
