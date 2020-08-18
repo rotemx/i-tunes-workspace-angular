@@ -18,6 +18,12 @@
     },
     {
       "path": "./projects/DivCanvas/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/DynamicForms/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/DynamicForms/tsconfig.spec.json"
     }
 ]
 }
