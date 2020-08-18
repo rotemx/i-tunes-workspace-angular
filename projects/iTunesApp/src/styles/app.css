@@ -93,3 +93,8 @@ input.ng-invalid:not(.ng-pristine) {
 button:focus, input:focus {
     outline: 1px solid blue;
 }
+
+ita-circle {
+    /* height: 100px; */
+    /* width: 100px; */
+}

@@ -9,6 +9,7 @@ import {EditProfileViewComponent}         from './views/edit-profile-view/edit-p
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BinaryPipe } from './pipes/binary-pipe.pipe';
 import { TheMarkerDirective } from './directives/the-marker.directive';
+import { CircleComponent } from './components/circle/circle.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { TheMarkerDirective } from './directives/the-marker.directive';
         SongListComponent,
         EditProfileViewComponent,
         BinaryPipe,
-        TheMarkerDirective
+        TheMarkerDirective,
+        CircleComponent
     ],
     imports     : [
         BrowserModule,

@@ -1,0 +1,34 @@
+.wrap {display: flex;border: 1px solid;/* height: 100%; */flex: 1;/* width: 100%; */flex-direction: column;padding: 40px;}
+
+body, html, app-root {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex: 1;
+}
+
+.tool-box {
+	/* background: #afb5fc69; */
+	padding: 6px;
+	border-radius: 10px;
+	/* flex: 1; */
+	margin-bottom: 4px;
+	flex-direction: row;
+	display: flex;
+}
+
+
+.canvas {
+    /* width: 100%; */
+    border: 1px solid #aeaeae;
+    /* margin-top: 50px; */
+    flex: 1;
+    border-radius: 10px;
+    position: relative;
+}
+
+.formatted_div {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}

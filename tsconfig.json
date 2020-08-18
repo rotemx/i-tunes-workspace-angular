@@ -12,6 +12,12 @@
     },
     {
       "path": "./projects/iTunesApp/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/DivCanvas/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/DivCanvas/tsconfig.spec.json"
     }
 ]
 }

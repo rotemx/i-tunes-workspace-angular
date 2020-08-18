@@ -1,14 +1,25 @@
-<div class="app-wrap">
-	<header>iTunes App</header>
-	<h2> When words fail, <span TheMarker="yellow">music speaks</span> </h2>
-	<div class="content">
-		<router-outlet></router-outlet>
-	</div>
+<div style="width:200px">
+	<select [(ngModel)]="color">
+		<option value="blue">blue</option>
+		<option value="green">green</option>
+		<option value="red">red</option>
+		<option value="purple">purple</option>
+	</select>
 	
-	<footer>
-		<div>iTunes App Footer</div>
-		<div>
-			<a [routerLink]="'/profile'"> Edit User Profile </a>
-		</div>
-	</footer>
+	<ita-circle [color]="color"></ita-circle>
 </div>
+
+<!--<div class="app-wrap">-->
+<!--	<header>iTunes App</header>-->
+<!--	<h2> When words fail, <span TheMarker="yellow">music speaks</span> </h2>-->
+<!--	<div class="content">-->
+<!--		<router-outlet></router-outlet>-->
+<!--	</div>-->
+<!--	-->
+<!--	<footer>-->
+<!--		<div>iTunes App Footer</div>-->
+<!--		<div>-->
+<!--			<a [routerLink]="'/profile'"> Edit User Profile </a>-->
+<!--		</div>-->
+<!--	</footer>-->
+<!--</div>-->

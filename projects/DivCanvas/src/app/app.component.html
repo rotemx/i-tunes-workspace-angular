@@ -1,0 +1,76 @@
+<div class="wrap">
+	<button (click)="onAddDiv()"> Add+</button>
+	<div class="toolbox-set" *ngFor="let div of divs"
+	     [ngStyle]="{
+			backgroundColor:div.backgroundColor
+	}"
+	>
+		<div class="tool-box">
+			<div class="tool">
+				<div class="input-label">Background color</div>
+				<input type="color" [(ngModel)]="div['backgroundColor']">
+			</div>
+			<div class="tool">
+				<div class="input-label">border color</div>
+				<input type="color" [(ngModel)]="div['borderColor']">
+			</div>
+			<div class="tool">
+				<div class="input-label">border Width</div>
+				<input type="range" [(ngModel)]="div.borderWidth">
+			</div>
+		</div>
+		<div class="tool-box">
+			<div class="tool">
+				<div class="input-label">border Radius</div>
+				<input type="range" [(ngModel)]="div.borderRadius">
+			</div>
+			<div class="tool">
+				<div class="input-label">left</div>
+				<input type="range" max="1000" [(ngModel)]="div.left">
+			</div>
+			<div class="tool">
+				<div class="input-label">top</div>
+				<input type="range" max="1000" [(ngModel)]="div.top">
+			</div>
+		</div>
+		<div class="tool-box">
+			<div class="tool">
+				<div class="input-label">opacity</div>
+				<input type="range" min="0" max="1" step="0.01" [(ngModel)]="div.opacity">
+			</div>
+			<div class="tool">
+				<br>
+				<input type="radio" value="solid" id="solid" [(ngModel)]="div.borderStyle">
+				<label for="solid">solid</label><br>
+				
+				<input type="radio" value="dotted" id="dotted" [(ngModel)]="div.borderStyle">
+				<label for="dotted">dotted</label><br>
+				<input type="radio" value="dashed" id="dashed" [(ngModel)]="div.borderStyle">
+				<label for="dashed">dashed</label><br>
+			
+			
+			</div>
+			<div class="tool">
+				<button (click)="onRemove(div)"> [-]</button>
+			</div>
+		</div>
+	</div>
+	<div class="canvas">
+		
+		<div class="tool-box" *ngFor="let div of divs"
+		
+		     class="formatted_div"
+		     [ngStyle]="{
+				position: 'absolute',
+					backgroundColor:div.backgroundColor,
+					borderColor:div.borderColor,
+					borderWidth:div.borderWidth + 'px',
+					borderRadius:div.borderRadius + 'px',
+					borderStyle: div.borderStyle,
+					left:div.left + 'px',
+					top:div.top + 'px',
+					opacity:div.opacity
+				}"
+		></div>
+	</div>
+</div>
