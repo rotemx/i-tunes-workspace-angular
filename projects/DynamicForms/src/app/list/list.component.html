@@ -1,0 +1,8 @@
+<input [(ngModel)]="new_item">
+<button (click)="onAdd()">Add</button>
+<div class="dyn-list">
+	<div *ngFor="let item of items;let i=index">
+		{{item}}
+		<span (click)="onDelete(i)">[...x...]</span>
+	</div>
+</div>

@@ -21,6 +21,7 @@ export class DynamicSectionComponent implements OnInit {
     }
     
     ngOnInit(): void {
+        
         const fields = this
             .section.fields
             .reduce((dict: any, curr: DynamicField, i, array) => {
@@ -35,13 +36,20 @@ export class DynamicSectionComponent implements OnInit {
         // }
         
         this.formGroup = new FormGroup(fields);
-        
-        
         // FormGroups be like:
         // this.formGroup = new FormGroup({
         //   firstName : new FormControl(''),
         //   lastName : new FormControl(''),
         // });
+        
+        
+        this.formGroup.valueChanges
+            .subscribe(data => {
+                // console.log('data');
+                // console.log(data);
+                
+                
+            });
         
     }
     

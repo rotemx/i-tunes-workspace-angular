@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {UserDetailsComponent}             from './my-forms/user-details/user-details.component';
 import {DynamicFormComponent}             from './dynamic-forms/dynamic-form/dynamic-form.component';
 import {DynamicSectionComponent}          from './dynamic-forms/dynamic-section/dynamic-section.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import {DynamicSectionComponent}          from './dynamic-forms/dynamic-section/
         DynamicFormComponent,
         UserDetailsComponent,
         DynamicFormComponent,
-        DynamicSectionComponent
+        DynamicSectionComponent,
+        ListComponent
     ],
     imports     : [
         BrowserModule,
