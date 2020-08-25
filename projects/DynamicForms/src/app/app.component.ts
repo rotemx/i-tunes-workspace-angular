@@ -1,11 +1,5 @@
-import {Component} from '@angular/core';
-
-
-export enum FieldTypes {
-    Text = 'text',
-    Color = 'color'
-}
-
+import {Component}  from '@angular/core';
+import {FieldTypes} from './types/enums/field-types';
 
 @Component({
     selector   : 'dyn-root',
@@ -14,33 +8,10 @@ export enum FieldTypes {
 })
 export class AppComponent {
     
-    FieldTypes = FieldTypes
+    FieldTypes = FieldTypes;
     
-    user:any = {};
+    user: any = {};
     
     title = 'DynamicForms';
     
-    form = {
-        model : this.user,
-        title : 'User Details',
-        fields: [
-            {
-                type: FieldTypes.Text,
-                placeholder: "enter first name",
-                label : "First Name",
-                prop: 'firstName'
-            },
-            {
-                type: FieldTypes.Text,
-                placeholder: "enter last name",
-                label : "Last Name",
-                prop: 'lastName'
-            },
-            {
-                type: FieldTypes.Color,
-                label : "Favorite Color",
-                prop: 'color'
-            },
-        ]
-    };
 }

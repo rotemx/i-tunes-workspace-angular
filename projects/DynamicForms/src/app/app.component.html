@@ -1,30 +1,9 @@
+
 <div class="app-wrap">
+
+	<dyn-user-details>
 	
-	<div>
-		<h2>
-			{{form.title}}
-		</h2>
-		<div class="form-fields">
-			<div class="field-wrap" *ngFor="let field of form.fields">
-				
-				<div class="field-selector" [ngSwitch]="field.type">
-					<div class="field-selector" *ngSwitchCase="FieldTypes.Text">
-						<label>{{field.label}}</label>
-						<input [placeholder]="field.placeholder" [(ngModel)]="form.model[field.prop]">
-					</div>
-					<div class="field-selector" *ngSwitchCase="FieldTypes.Color">
-						<label>{{field.label}}</label>
-						<input type="color" [(ngModel)]="form.model[field.prop]">
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</div>
+	</dyn-user-details>
 	
-	<div>
-		<h3>
-			{{user | json}}
-		</h3>
-	</div>
+	
 </div>

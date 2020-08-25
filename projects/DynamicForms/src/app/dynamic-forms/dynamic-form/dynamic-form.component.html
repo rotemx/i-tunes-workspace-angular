@@ -1,0 +1,15 @@
+<div class="dyn-form">
+	<h2>{{form.title}}</h2>
+	
+	<form
+			*ngIf="form"
+	>
+		<dyn-dynamic-section
+				*ngFor="let section of form.sections"
+				[section]="section"
+		>
+		
+		</dyn-dynamic-section>
+	
+	</form>
+</div>
